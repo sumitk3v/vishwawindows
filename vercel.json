@@ -1,14 +1,14 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [
         {
           "type": "host",
           "value": "vishwawindows.vercel.app"
         }
       ],
-      "destination": "https://vishwawindows.com/:path*",
+      "destination": "https://vishwawindows.com/$1",
       "permanent": true
     }
   ],
