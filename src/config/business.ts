@@ -8,7 +8,7 @@ export const business = {
   name: "Vishwa Windows",
   founder: "Sumit Vishwakarma",
   tagline: "Show Us The Problem.",
-  siteUrl: "https://vishwaworks.vercel.app",
+  siteUrl: "https://vishwawindows.com",
   googleAnalyticsId: "G-SGTEKGVKG5",
 
   whatsappNumber: "919004515924",

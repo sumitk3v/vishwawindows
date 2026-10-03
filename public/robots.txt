@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vishwaworks.vercel.app/sitemap.xml
+Sitemap: https://vishwawindows.com/sitemap.xml
