@@ -1,10 +1,77 @@
 import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { Header } from "@/components/site/Header";
-import { Faq, Footer, Reviews, ServiceAreas, Services, StickyMobileCTA, WhyChooseUs, WorkGallery } from "@/components/site/Sections";
+import {
+  Faq,
+  Footer,
+  Reviews,
+  ServiceAreas,
+  Services,
+  StickyMobileCTA,
+  WhyChooseUs,
+  WorkGallery,
+} from "@/components/site/Sections";
 import { CallButton, WhatsAppButton } from "@/components/site/cta";
-import { business, whatsappLink } from "@/config/business";
+import { business, businessPostalAddress, serviceCategories } from "@/config/business";
 import { CheckCircle2, ShieldCheck, Clock, Wrench, ArrowRight } from "lucide-react";
+
+/** Highest-search services, each given an area-specific H3 on every area page. */
+const topAreaServices = [
+  {
+    name: "Pigeon Net",
+    path: "/pigeon-net-installation-mumbai",
+    text: (a: string) =>
+      `Pigeon net (kabutar jali) and bird net for balconies, windows and AC ledges in ${a}. UV-stabilized, tight-fitted, priced per sq. ft.`,
+  },
+  {
+    name: "Invisible Grill",
+    path: "/invisible-grills-mumbai",
+    text: (a: string) =>
+      `Stainless steel invisible grill and balcony safety grill for flats in ${a}. Child-safe, rust-proof and keeps your view open.`,
+  },
+  {
+    name: "Sliding Window Repair",
+    path: "/sliding-window-repair-powai",
+    text: (a: string) =>
+      `Stuck, heavy or noisy sliding windows in ${a} fixed with new rollers, tracks and locks, usually in one visit.`,
+  },
+  {
+    name: "New Aluminium Sliding Windows",
+    path: "/new-window-installation-mumbai",
+    text: (a: string) =>
+      `2-track and 3-track aluminium and Domal sliding windows made in our Powai workshop and fitted in ${a}.`,
+  },
+  {
+    name: "French Windows",
+    path: "/french-windows-mumbai",
+    text: (a: string) =>
+      `Floor-to-ceiling French windows and sliding folding doors for balconies in ${a}.`,
+  },
+  {
+    name: "Aluminium Bathroom Door",
+    path: "/aluminium-door-installation-mumbai",
+    text: (a: string) =>
+      `Waterproof, termite-proof aluminium bathroom and washroom doors made to measure for homes in ${a}.`,
+  },
+  {
+    name: "Glass Work & Toughened Glass",
+    path: "/glass-shop-powai",
+    text: (a: string) =>
+      `Window glass, toughened glass, shower partitions and glass railings measured and fitted in ${a}.`,
+  },
+  {
+    name: "Mosquito Net for Sliding Window",
+    path: "/mosquito-net-sliding-window-mumbai",
+    text: (a: string) =>
+      `Sliding, pleated and fixed mosquito nets fitted to existing aluminium windows in ${a}.`,
+  },
+] as const;
+
+const areaServiceLinks = (
+  serviceCategories.flatMap((c) => [...c.items]) as ReadonlyArray<{ name: string; path?: string }>
+)
+  .filter((s): s is { name: string; path: string } => Boolean(s.path))
+  .filter((s, i, all) => all.findIndex((x) => x.path === s.path) === i);
 
 export type AreaPageContent = {
   areaName: string;
@@ -35,9 +102,7 @@ export function AreaPage({
               <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
               Serving {content.areaName}, Mumbai
             </div>
-            <h1 className="hero-h1 text-white">
-              {content.h1}
-            </h1>
+            <h1 className="hero-h1 text-white">{content.h1}</h1>
             <p className="hero-sub mt-4 text-base sm:text-lg md:text-xl text-primary-foreground/90 leading-relaxed max-w-2xl">
               {content.intro}
             </p>
@@ -58,7 +123,11 @@ export function AreaPage({
                   </span>
                 </span>
               </WhatsAppButton>
-              <CallButton location={content.locationKey} variant="outline" className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:border-primary-foreground/60" />
+              <CallButton
+                location={content.locationKey}
+                variant="outline"
+                className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:border-primary-foreground/60"
+              />
             </div>
 
             <div className="mt-6 flex flex-wrap gap-4 text-xs sm:text-sm text-primary-foreground/75">
@@ -83,7 +152,8 @@ export function AreaPage({
                 Common Window & Door Problems We Solve in {content.areaName}
               </h2>
               <p className="mt-2 text-sm sm:text-base text-muted-foreground">
-                Don't let local carpenters convince you to replace your entire frame for ₹15,000+. We restore them to factory-smooth glide for a fraction of the cost.
+                Don't let local carpenters convince you to replace your entire frame for ₹15,000+.
+                We restore them to factory-smooth glide for a fraction of the cost.
               </p>
             </div>
 
@@ -112,7 +182,9 @@ export function AreaPage({
                 How It Works: Show Us The Problem
               </h3>
               <p className="mt-2 text-sm text-foreground/80 leading-relaxed max-w-2xl">
-                Take a quick 5-second video or photo of your window/door track on your phone and send it to our technicians on WhatsApp. We diagnose the issue and give you upfront pricing before visiting.
+                Take a quick 5-second video or photo of your window/door track on your phone and
+                send it to our technicians on WhatsApp. We diagnose the issue and give you upfront
+                pricing before visiting.
               </p>
               <div className="mt-6">
                 <WhatsAppButton
@@ -133,6 +205,60 @@ export function AreaPage({
               </div>
             </div>
 
+            <div className="mt-10">
+              <h2 className="section-h2 text-foreground">
+                Looking for Window Repair Near Me in {content.areaName}?
+              </h2>
+              <p className="mt-3 text-base leading-relaxed text-foreground/85">
+                {business.name} is an aluminium and glass workshop at IIT Market, Powai, and our
+                technicians visit homes, societies and offices in {content.areaName} every week. We
+                repair stuck sliding windows and sliding doors, replace rollers, locks and broken
+                glass, and install pigeon nets, invisible grills, mosquito nets, aluminium bathroom
+                doors, glass partitions and new aluminium sliding windows.
+              </p>
+              <p className="mt-3 text-base leading-relaxed text-foreground/85">
+                Send a photo or short video on WhatsApp. We tell you what is wrong and what it will
+                cost before anyone visits, so you never pay for a wasted trip.
+              </p>
+            </div>
+
+            <div className="mt-10">
+              <h2 className="section-h2 text-foreground">Popular Services in {content.areaName}</h2>
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                {topAreaServices.map((s) => (
+                  <a
+                    key={s.path}
+                    href={s.path}
+                    className="rounded-xl border border-border bg-card p-4 hover:border-primary/40"
+                  >
+                    <h3 className="font-bold text-foreground">
+                      {s.name} in {content.areaName}
+                    </h3>
+                    <p className="mt-1 text-sm text-muted-foreground">{s.text(content.areaName)}</p>
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-10">
+              <h2 className="section-h2 text-foreground">Our Services in {content.areaName}</h2>
+              <ul className="mt-5 grid gap-3 sm:grid-cols-2">
+                {areaServiceLinks.map((s) => (
+                  <li key={s.path}>
+                    <a
+                      href={s.path}
+                      className="flex items-center justify-between gap-3 rounded-xl border border-border bg-card p-4 text-sm font-semibold text-foreground hover:border-primary/40"
+                    >
+                      <span>
+                        {s.name} in {content.areaName}
+                      </span>
+                      <ArrowRight className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             {children}
           </div>
         </section>
@@ -151,7 +277,8 @@ export function AreaPage({
               NEED WINDOW REPAIR IN {content.areaName.toUpperCase()}?
             </h2>
             <p className="mt-3 text-base text-primary-foreground/80">
-              Message us right now on WhatsApp. Send a photo and get expert assistance within minutes.
+              Message us right now on WhatsApp. Send a photo and get expert assistance within
+              minutes.
             </p>
             <div className="mt-8 flex flex-col justify-center gap-3.5 sm:flex-row">
               <WhatsAppButton
@@ -202,24 +329,24 @@ export function areaHead({
         type: "application/ld+json",
         children: JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "HomeAndConstructionBusiness",
-          name: `${business.name} - ${areaName}`,
+          "@type": "Service",
+          name: `Window repair, invisible grills & pigeon nets in ${areaName}`,
           description,
           url: fullUrl,
-          telephone: business.phone,
-          priceRange: "₹₹",
           areaServed: {
             "@type": "Place",
-            name: `${areaName}, Mumbai`,
+            name: areaName === "Thane" ? "Thane" : `${areaName}, Mumbai`,
           },
-          address: {
-            "@type": "PostalAddress",
-            addressLocality: `${areaName}, Mumbai`,
-            addressRegion: "Maharashtra",
-            addressCountry: "IN",
+          provider: {
+            "@type": "HomeAndConstructionBusiness",
+            name: business.name,
+            url: business.siteUrl,
+            telephone: business.phone,
+            priceRange: "₹₹",
+            address: businessPostalAddress,
+            hasMap: business.googleBusinessProfileUrl,
+            sameAs: [business.googleBusinessProfileUrl],
           },
-          hasMap: business.googleBusinessProfileUrl,
-          sameAs: [business.googleBusinessProfileUrl],
         }),
       },
       {

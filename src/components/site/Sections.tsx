@@ -214,8 +214,8 @@ export function Services() {
   return (
     <section id="services" className="reveal-section bg-secondary/5 py-20 sm:py-28">
       <div className="mx-auto max-w-6xl px-4">
-        <Heading sub="From stuck sliding doors to brand new safety nets and soundproof glass. We fix it all without the headache.">
-          EVERYTHING <span className="highlighter px-2 text-black">WE FIX FOR YOU.</span>
+        <Heading sub="Sliding window repair and new aluminium sliding windows, pigeon nets, invisible grills, French windows, toughened glass, glass railings, aluminium bathroom doors, kitchen cupboards and partitions across Powai and Mumbai.">
+          ALUMINIUM WINDOW, GRILL &amp; NET SERVICES <span className="highlighter px-2 text-black">IN MUMBAI</span>
         </Heading>
 
         <div className="mt-16 space-y-20">
@@ -237,7 +237,13 @@ export function Services() {
                         strokeWidth={2.5}
                       />
                     </span>
-                    <h4 className="mt-4 text-[18px] font-black text-primary leading-tight tracking-wide font-display">{s.name}</h4>
+                    <h4 className="mt-4 text-[18px] font-black text-primary leading-tight tracking-wide font-display">
+                      {"path" in s ? (
+                        <a href={s.path} className="hover:underline underline-offset-4">{s.name}</a>
+                      ) : (
+                        s.name
+                      )}
+                    </h4>
                     <p className="mt-2.5 flex-1 text-[14px] sm:text-[15px] font-medium leading-relaxed text-slate-800">
                       {s.desc}
                     </p>
@@ -333,30 +339,30 @@ export function Offer() {
 
 /* ---------------- 11 + 12. PROOF ---------------- */
 
-import imgLockHandleKey from "@/assets/images/real-soundproof-domal-sliding.webp";
-import imgKitchenDuct1 from "@/assets/images/real-kitchen-window-exhaust-1.webp";
-import imgKitchenWorkshopProof05 from "@/assets/images/sliding-window-workshop-proof-05.webp";
-import imgGlassPartition from "@/assets/images/real-office-glass-partition.webp";
-import imgPigeonNet1 from "@/assets/images/real-balcony-pigeon-net-1.webp";
-import imgBalconyNet2 from "@/assets/images/real-balcony-pigeon-net-2.webp";
-import imgBalconyGrillBars from "@/assets/images/real-balcony-railing-grill-bars.webp";
-import imgInvisibleGrill1 from "@/assets/images/real-invisible-safety-grill-1.webp";
-import imgInvisibleGrill2 from "@/assets/images/real-invisible-safety-grill-2.webp";
-import imgInvisibleGrill3 from "@/assets/images/real-invisible-safety-grill-3.webp";
-import imgBalconyViewNet from "@/assets/images/real-highrise-balcony-net-view.webp";
-import imgLivingRoomSlider1 from "@/assets/images/real-living-room-sliding-window-1.webp";
-import imgLivingRoomSlider2 from "@/assets/images/real-living-room-sliding-window-2.webp";
-import imgWindowHandleLatch from "@/assets/images/real-broken-window-handle.webp";
-import imgBalconyGlider from "@/assets/images/real-balcony-sliding-glide.webp";
+import imgLockHandleKey from "@/assets/images/soundproof-domal-sliding-window-mumbai.webp";
+import imgKitchenDuct1 from "@/assets/images/kitchen-window-exhaust-fan-mumbai-1.webp";
+import imgKitchenWorkshopProof05 from "@/assets/images/balcony-sliding-door-repair-highrise-mumbai.webp";
+import imgGlassPartition from "@/assets/images/office-glass-partition-mumbai.webp";
+import imgPigeonNet1 from "@/assets/images/balcony-pigeon-net-installation-mumbai-1.webp";
+import imgBalconyNet2 from "@/assets/images/invisible-grill-installation-balcony-mumbai.webp";
+import imgBalconyGrillBars from "@/assets/images/pigeon-net-for-windows-mumbai.webp";
+import imgInvisibleGrill1 from "@/assets/images/invisible-grill-balcony-mumbai-1.webp";
+import imgInvisibleGrill2 from "@/assets/images/invisible-grill-balcony-mumbai-2.webp";
+import imgInvisibleGrill3 from "@/assets/images/invisible-grill-balcony-mumbai-3.webp";
+import imgBalconyViewNet from "@/assets/images/highrise-balcony-pigeon-net-mumbai.webp";
+import imgLivingRoomSlider1 from "@/assets/images/aluminium-sliding-window-living-room-mumbai-1.webp";
+import imgLivingRoomSlider2 from "@/assets/images/aluminium-sliding-window-living-room-mumbai-2.webp";
+import imgWindowHandleLatch from "@/assets/images/upvc-window-handle-lock-replacement-mumbai.webp";
+import imgBalconyGlider from "@/assets/images/balcony-sliding-door-repair-mumbai.webp";
 
-import imgOfficePartition1 from "@/assets/images/real-office-partition-view-1.webp";
-import imgOfficePartition2 from "@/assets/images/real-office-partition-view-2.webp";
-import imgOfficePartition3 from "@/assets/images/real-office-partition-view-3.webp";
+import imgOfficePartition1 from "@/assets/images/office-aluminium-partition-mumbai-1.webp";
+import imgOfficePartition2 from "@/assets/images/office-aluminium-partition-mumbai-2.webp";
+import imgOfficePartition3 from "@/assets/images/office-aluminium-partition-mumbai-3.webp";
 
 import wsWorkshopShelf from "@/assets/images/sliding-window-spare-parts-workshop.jpg";
 import wsFinishedCloseup from "@/assets/images/domal-sliding-window-glide-closeup.jpg";
 import wsImg6 from "@/assets/images/sliding-window-bearing-roller-replacement.jpg";
-import imgSoundproofDomal from "@/assets/images/real-soundproof-domal-sliding.webp";
+import imgSoundproofDomal from "@/assets/images/soundproof-domal-sliding-window-mumbai.webp";
 import founderImage from "@/assets/images/sumit-vishwakarma-founder.jpg";
 
 interface RealWorkProject {
@@ -652,7 +658,7 @@ export function WorkGallery() {
             <div className="relative w-full h-[260px] sm:h-[340px] lg:h-full min-h-[320px] rounded-2xl sm:rounded-3xl overflow-hidden border border-border shadow-md group bg-slate-900">
               <img
                 src={wsWorkshopShelf}
-                alt="Vishwa Works Powai Workshop and Hardware Inventory"
+                alt="Vishwa Windows Powai Workshop and Hardware Inventory"
                 width={640}
                 height={480}
                 loading="lazy"
@@ -686,7 +692,7 @@ export function WorkGallery() {
                 <span className="highlighter px-1.5 text-black">We Stock 1,000+ Bearings</span> In Our Own Powai Workshop.
               </h3>
 
-              {/* The Mistri Trap vs. Vishwa Works Way */}
+              {/* The Mistri Trap vs. Vishwa Windows Way */}
               <div className="mt-5 rounded-2xl bg-white border border-border shadow-sm divide-y divide-border overflow-hidden">
                 <div className="p-3.5 sm:p-4 flex items-start gap-3 bg-red-500/[0.03]">
                   <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-red-100 text-red-600 text-xs font-black">
@@ -708,7 +714,7 @@ export function WorkGallery() {
                   </span>
                   <div>
                     <p className="text-xs sm:text-sm font-black text-emerald-950">
-                      The Honest Mumbai Vishwa Works Way
+                      The Honest Mumbai Vishwa Windows Way
                     </p>
                     <p className="text-xs sm:text-sm text-slate-800 mt-1 leading-relaxed font-medium">
                       Our technician arrives with genuine Domal, Jindal, and heavy-duty steel roller bearings in his toolkit. Fixed right in front of your eyes in <b>45 minutes flat</b> with a 1-year smooth glide guarantee.
@@ -830,7 +836,7 @@ export function ServiceAreas() {
   return (
     <section id="areas" className="reveal-section py-20 sm:py-28 overflow-hidden bg-background">
       <div className="mx-auto max-w-7xl px-4 text-center mb-10">
-        <Heading sub="Serving homeowners in Powai, Bandra, Worli, South Mumbai, and premium complexes everywhere in between. When you search for 'sliding window repair near me' or 'sliding glass door repair near me', we are your trusted local experts.">
+        <Heading sub="Serving homeowners in Powai, Bandra, Worli, South Mumbai, and premium complexes everywhere in between. When you search for 'window repair near me', 'pigeon net near me', 'invisible grill near me' or 'glass shop near me', we are your local workshop at IIT Market, Powai.">
           FAST, ON-SITE REPAIRS <br className="hidden sm:block" />ACROSS <span className="highlighter px-2 text-black">MUMBAI.</span>
         </Heading>
       </div>
@@ -845,7 +851,7 @@ export function ServiceAreas() {
         <WhatsAppButton
           location="areas_cta"
           message={whatsappMessages.area}
-          ariaLabel="Check if Vishwa Works serves your area on WhatsApp"
+          ariaLabel="Check if Vishwa Windows serves your area on WhatsApp"
         >
           CHECK IF WE SERVE YOUR AREA
         </WhatsAppButton>
@@ -892,7 +898,7 @@ const reviews = [
   {
     name: "Rahul M.",
     title: "Saved me ₹15,000!",
-    text: "My sliding window was stuck for months. Two local carpenters said I had to replace the entire frame (quoted ₹15k). Vishwa Works replaced the rollers in 45 minutes for a fraction of the cost.",
+    text: "My sliding window was stuck for months. Two local carpenters said I had to replace the entire frame (quoted ₹15k). Vishwa Windows replaced the rollers in 45 minutes for a fraction of the cost.",
     rating: 5,
     date: "Google Review"
   },
@@ -934,7 +940,7 @@ const reviews = [
   {
     name: "Karan T.",
     title: "Best in Hiranandani",
-    text: "Tried three different handymen before finding Vishwa Works. They had the exact branded rollers my premium windows needed.",
+    text: "Tried three different handymen before finding Vishwa Windows. They had the exact branded rollers my premium windows needed.",
     rating: 5,
     date: "Google Review"
   },
@@ -1034,7 +1040,7 @@ export function Reviews() {
             href={business.googleBusinessProfileUrl || business.googleMapsSearchUrl}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="View Vishwa Works 4.9-star customer reviews on Google Maps"
+            aria-label="View Vishwa Windows 4.9-star customer reviews on Google Maps"
             onClick={() => track("google_profile_click", { location: "reviews" })}
             className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm sm:text-base font-bold text-primary shadow-md hover:shadow-lg hover:text-accent transition-all border border-border/80"
           >
@@ -1087,7 +1093,7 @@ export function UsVsThem() {
     <section className="reveal-section bg-secondary/20 py-20 sm:py-28">
       <div className="mx-auto max-w-5xl px-4">
         <Heading sub="Why Mumbai families choose us instead of regular handymen.">
-          <span className="font-display font-black tracking-tight text-3xl sm:text-5xl uppercase">Vishwa Works <span className="text-red-500 px-2 line-through">VS.</span> The Local Mistri</span>
+          <span className="font-display font-black tracking-tight text-3xl sm:text-5xl uppercase">Vishwa Windows <span className="text-red-500 px-2 line-through">VS.</span> The Local Mistri</span>
         </Heading>
         <div className="mt-12 overflow-hidden rounded-3xl border-2 border-border bg-card shadow-xl shadow-accent/5">
           <div className="grid grid-cols-2 divide-x divide-border sm:grid-cols-3">
@@ -1098,7 +1104,7 @@ export function UsVsThem() {
               <p className="text-xl sm:text-2xl font-black text-red-700 font-display uppercase tracking-tight">Local Mistri</p>
             </div>
             <div className="bg-orange-50/80 p-5 sm:p-6 text-center border-b-2 border-orange-200">
-              <p className="text-xl sm:text-2xl font-black text-amber-950 font-display uppercase tracking-tight">Vishwa Works</p>
+              <p className="text-xl sm:text-2xl font-black text-amber-950 font-display uppercase tracking-tight">Vishwa Windows</p>
             </div>
           </div>
           <div className="divide-y divide-border">
@@ -1283,7 +1289,7 @@ export function FoundersStory() {
                 "The truth? 90% of the time, it's just a worn-out ₹500 roller or a bent track."
               </p>
               <p>
-                "I started Vishwa Works with a simple mission: <b className="text-accent font-black">Repair first, replace only when absolutely necessary.</b> We give you honest advice, upfront pricing, and a 'No Fix, No Fee' guarantee. It's how service should be."
+                "I started Vishwa Windows with a simple mission: <b className="text-accent font-black">Repair first, replace only when absolutely necessary.</b> We give you honest advice, upfront pricing, and a 'No Fix, No Fee' guarantee. It's how service should be."
               </p>
             </div>
             <p className="mt-8 text-xl font-bold text-white font-display uppercase tracking-wider">— {business.founder}, Founder</p>
@@ -1365,7 +1371,7 @@ export function StickyMobileCTA() {
       <div className="grid grid-cols-[1fr_2.4fr] gap-2">
         <a
           href={business.phoneHref}
-          aria-label={`Call Vishwa Works Window Repair at ${business.phone}`}
+          aria-label={`Call Vishwa Windows at ${business.phone}`}
           onClick={() => track("call_click", { location: "sticky_mobile" })}
           className="tap flex min-h-[50px] items-center justify-center gap-1.5 rounded-xl border-2 border-primary bg-primary/5 text-primary text-xs font-black uppercase tracking-wide active:scale-95 transition-transform"
         >
@@ -1376,7 +1382,7 @@ export function StickyMobileCTA() {
           href={whatsappLink()}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Contact Vishwa Works on WhatsApp for Free Window Repair Diagnosis"
+          aria-label="Contact Vishwa Windows on WhatsApp for Free Window Repair Diagnosis"
           onClick={() => track("whatsapp_click", { location: "sticky_mobile" })}
           className="tap cta-live flex min-h-[50px] items-center justify-center gap-2 rounded-xl bg-whatsapp text-[13px] font-black text-white shadow-[var(--shadow-cta)] active:scale-95 transition-transform font-display tracking-wide uppercase"
         >
@@ -1415,7 +1421,7 @@ export function Footer() {
           <p className="mt-2">
             <a
               href={business.phoneHref}
-              aria-label={`Call Vishwa Works Window Repair at ${business.phone}`}
+              aria-label={`Call Vishwa Windows at ${business.phone}`}
             >
               {business.phone}
             </a>
@@ -1425,7 +1431,7 @@ export function Footer() {
               href={whatsappLink()}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Contact Vishwa Works on WhatsApp for Free Window Repair Diagnosis"
+              aria-label="Contact Vishwa Windows on WhatsApp for Free Window Repair Diagnosis"
             >
               WhatsApp us
             </a>
@@ -1439,7 +1445,7 @@ export function Footer() {
               }
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="View Vishwa Works 4.9-star customer reviews on Google Maps"
+              aria-label="View Vishwa Windows 4.9-star customer reviews on Google Maps"
               onClick={() => track("google_profile_click", { location: "footer" })}
               className="underline underline-offset-4"
             >
@@ -1453,7 +1459,7 @@ export function Footer() {
                 href={whatsappLink()}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Contact Vishwa Works on WhatsApp for Free Window Repair Diagnosis"
+                aria-label="Contact Vishwa Windows on WhatsApp for Free Window Repair Diagnosis"
                 className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-white/10 hover:bg-whatsapp hover:text-white transition-colors"
               >
                 <WhatsAppIcon className="h-5 w-5" />
@@ -1520,6 +1526,42 @@ export function Footer() {
               <a href="/new-window-installation-mumbai">New Window Installation</a>
             </li>
             <li>
+              <a href="/invisible-grills-mumbai">Invisible Grills</a>
+            </li>
+            <li>
+              <a href="/pigeon-net-installation-mumbai">Pigeon Net Installation</a>
+            </li>
+            <li>
+              <a href="/mosquito-net-sliding-window-mumbai">Mosquito Net For Windows</a>
+            </li>
+            <li>
+              <a href="/soundproof-window-upgrades-mumbai">Soundproof Windows</a>
+            </li>
+            <li>
+              <a href="/french-windows-mumbai">French Windows</a>
+            </li>
+            <li>
+              <a href="/aluminium-door-installation-mumbai">Aluminium Doors</a>
+            </li>
+            <li>
+              <a href="/aluminium-partition-installation-mumbai">Aluminium Partitions</a>
+            </li>
+            <li>
+              <a href="/glass-shop-powai">Glass Shop & Toughened Glass</a>
+            </li>
+            <li>
+              <a href="/glass-partition-mumbai">Shower Glass Partitions</a>
+            </li>
+            <li>
+              <a href="/glass-balcony-railing-mumbai">Glass Balcony Railings</a>
+            </li>
+            <li>
+              <a href="/bathroom-window-mumbai">Bathroom Windows</a>
+            </li>
+            <li>
+              <a href="/aluminium-kitchen-cupboard-mumbai">Aluminium Kitchen Cupboards</a>
+            </li>
+            <li>
               <a href="/privacy">Privacy Policy</a>
             </li>
             <li>
@@ -1554,10 +1596,21 @@ type GalleryItem = {
   url: string;
   poster: string;
   isVideo: boolean;
+  alt: string;
 };
 
+/** "balcony-pigeon-net-installation-mumbai-1" -> "Balcony pigeon net installation Mumbai" */
+function altFromFilename(filename: string) {
+  const words = filename
+    .replace(/-\d+$/, "")
+    .split("-")
+    .map((w) => (w === "mumbai" ? "Mumbai" : w === "upvc" ? "uPVC" : w));
+  const text = words.join(" ");
+  return `${text.charAt(0).toUpperCase()}${text.slice(1)} by Vishwa Windows`;
+}
+
 const newVideos: GalleryItem[] = Object.keys(newVideosGlob)
-  .filter((key) => !key.includes('hero.mp4'))
+  .filter((key) => !(key.split('/').pop() || '').startsWith('hero-'))
   .map((key) => {
     const filename = key.split('/').pop()?.replace(/\.[^/.]+$/, "") || "";
     const item = newVideosGlob[key];
@@ -1566,11 +1619,12 @@ const newVideos: GalleryItem[] = Object.keys(newVideosGlob)
       url,
       poster: posterMap[filename] || url,
       isVideo: true,
+      alt: `Video: ${altFromFilename(filename)}`,
     };
   });
 
 const excludeFromGallery = new Set([
-  'hero-poster',
+  'hero-',
   'hero-window-repair',
   'sumit-vishwakarma-founder',
   'wreath-left',
@@ -1587,12 +1641,14 @@ const galleryPhotos: GalleryItem[] = Object.keys(allImagesGlob)
     return true;
   })
   .map((key) => {
+    const filename = key.split('/').pop()?.replace(/\.[^/.]+$/, "") || "";
     const item = allImagesGlob[key];
     const url = item ? item.default : "";
     return {
       url,
       poster: url,
       isVideo: false,
+      alt: altFromFilename(filename),
     };
   });
 
@@ -1614,7 +1670,7 @@ export function RealWorkGallery() {
           >
             <img 
               src={asset.poster} 
-              alt={`Sliding window repair work in Mumbai proof ${i + 1}`} 
+              alt={asset.alt} 
               width={320}
               height={420}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 pointer-events-none" 
@@ -1706,7 +1762,7 @@ export function RealWorkGallery() {
             ) : (
               <img 
                 src={selectedAsset.url} 
-                alt="Enlarged proof" 
+                alt={selectedAsset.alt} 
                 width={800}
                 height={600}
                 className="max-w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl"

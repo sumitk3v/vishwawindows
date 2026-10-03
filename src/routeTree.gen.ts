@@ -10,11 +10,22 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AluminiumDoorInstallationMumbaiRouteImport } from './routes/aluminium-door-installation-mumbai'
+import { Route as AluminiumKitchenCupboardMumbaiRouteImport } from './routes/aluminium-kitchen-cupboard-mumbai'
+import { Route as AluminiumPartitionInstallationMumbaiRouteImport } from './routes/aluminium-partition-installation-mumbai'
 import { Route as AluminiumPartitionRepairMumbaiRouteImport } from './routes/aluminium-partition-repair-mumbai'
 import { Route as AluminiumWindowRepairPowaiRouteImport } from './routes/aluminium-window-repair-powai'
+import { Route as BathroomWindowMumbaiRouteImport } from './routes/bathroom-window-mumbai'
 import { Route as CustomWindowModificationMumbaiRouteImport } from './routes/custom-window-modification-mumbai'
 import { Route as DomalWindowRepairMumbaiRouteImport } from './routes/domal-window-repair-mumbai'
+import { Route as FrenchWindowsMumbaiRouteImport } from './routes/french-windows-mumbai'
+import { Route as GlassBalconyRailingMumbaiRouteImport } from './routes/glass-balcony-railing-mumbai'
+import { Route as GlassPartitionMumbaiRouteImport } from './routes/glass-partition-mumbai'
+import { Route as GlassShopPowaiRouteImport } from './routes/glass-shop-powai'
+import { Route as InvisibleGrillsMumbaiRouteImport } from './routes/invisible-grills-mumbai'
+import { Route as MosquitoNetSlidingWindowMumbaiRouteImport } from './routes/mosquito-net-sliding-window-mumbai'
 import { Route as NewWindowInstallationMumbaiRouteImport } from './routes/new-window-installation-mumbai'
+import { Route as PigeonNetInstallationMumbaiRouteImport } from './routes/pigeon-net-installation-mumbai'
 import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as RubberGasketSealingMumbaiRouteImport } from './routes/rubber-gasket-sealing-mumbai'
 import { Route as SafetyNetsInstallationMumbaiRouteImport } from './routes/safety-nets-installation-mumbai'
@@ -33,12 +44,14 @@ import { Route as WindowRepairChemburSionRouteImport } from './routes/window-rep
 import { Route as WindowRepairColabaFortRouteImport } from './routes/window-repair-colaba-fort'
 import { Route as WindowRepairDadarMahimRouteImport } from './routes/window-repair-dadar-mahim'
 import { Route as WindowRepairGoregaonMaladRouteImport } from './routes/window-repair-goregaon-malad'
+import { Route as WindowRepairKandivaliBorivaliRouteImport } from './routes/window-repair-kandivali-borivali'
 import { Route as WindowRepairKanjurmargBhandupRouteImport } from './routes/window-repair-kanjurmarg-bhandup'
 import { Route as WindowRepairMulundNahurRouteImport } from './routes/window-repair-mulund-nahur'
 import { Route as WindowRepairMumbaiRouteImport } from './routes/window-repair-mumbai'
 import { Route as WindowRepairPowaiHiranandaniRouteImport } from './routes/window-repair-powai-hiranandani'
 import { Route as WindowRepairSantacruzKharRouteImport } from './routes/window-repair-santacruz-khar'
 import { Route as WindowRepairSouthMumbaiCuffeParadeRouteImport } from './routes/window-repair-south-mumbai-cuffe-parade'
+import { Route as WindowRepairThaneRouteImport } from './routes/window-repair-thane'
 import { Route as WindowRepairVikhroliGhatkoparRouteImport } from './routes/window-repair-vikhroli-ghatkopar'
 import { Route as WindowRepairWorliPrabhadeviRouteImport } from './routes/window-repair-worli-prabhadevi'
 import { Route as WindowRollerRepairPowaiRouteImport } from './routes/window-roller-repair-powai'
@@ -49,6 +62,24 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AluminiumDoorInstallationMumbaiRoute =
+  AluminiumDoorInstallationMumbaiRouteImport.update({
+    id: '/aluminium-door-installation-mumbai',
+    path: '/aluminium-door-installation-mumbai',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AluminiumKitchenCupboardMumbaiRoute =
+  AluminiumKitchenCupboardMumbaiRouteImport.update({
+    id: '/aluminium-kitchen-cupboard-mumbai',
+    path: '/aluminium-kitchen-cupboard-mumbai',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const AluminiumPartitionInstallationMumbaiRoute =
+  AluminiumPartitionInstallationMumbaiRouteImport.update({
+    id: '/aluminium-partition-installation-mumbai',
+    path: '/aluminium-partition-installation-mumbai',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const AluminiumPartitionRepairMumbaiRoute =
   AluminiumPartitionRepairMumbaiRouteImport.update({
     id: '/aluminium-partition-repair-mumbai',
@@ -61,6 +92,11 @@ const AluminiumWindowRepairPowaiRoute =
     path: '/aluminium-window-repair-powai',
     getParentRoute: () => rootRouteImport,
   } as any)
+const BathroomWindowMumbaiRoute = BathroomWindowMumbaiRouteImport.update({
+  id: '/bathroom-window-mumbai',
+  path: '/bathroom-window-mumbai',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const CustomWindowModificationMumbaiRoute =
   CustomWindowModificationMumbaiRouteImport.update({
     id: '/custom-window-modification-mumbai',
@@ -72,10 +108,48 @@ const DomalWindowRepairMumbaiRoute = DomalWindowRepairMumbaiRouteImport.update({
   path: '/domal-window-repair-mumbai',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FrenchWindowsMumbaiRoute = FrenchWindowsMumbaiRouteImport.update({
+  id: '/french-windows-mumbai',
+  path: '/french-windows-mumbai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GlassBalconyRailingMumbaiRoute =
+  GlassBalconyRailingMumbaiRouteImport.update({
+    id: '/glass-balcony-railing-mumbai',
+    path: '/glass-balcony-railing-mumbai',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const GlassPartitionMumbaiRoute = GlassPartitionMumbaiRouteImport.update({
+  id: '/glass-partition-mumbai',
+  path: '/glass-partition-mumbai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GlassShopPowaiRoute = GlassShopPowaiRouteImport.update({
+  id: '/glass-shop-powai',
+  path: '/glass-shop-powai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InvisibleGrillsMumbaiRoute = InvisibleGrillsMumbaiRouteImport.update({
+  id: '/invisible-grills-mumbai',
+  path: '/invisible-grills-mumbai',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MosquitoNetSlidingWindowMumbaiRoute =
+  MosquitoNetSlidingWindowMumbaiRouteImport.update({
+    id: '/mosquito-net-sliding-window-mumbai',
+    path: '/mosquito-net-sliding-window-mumbai',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const NewWindowInstallationMumbaiRoute =
   NewWindowInstallationMumbaiRouteImport.update({
     id: '/new-window-installation-mumbai',
     path: '/new-window-installation-mumbai',
+    getParentRoute: () => rootRouteImport,
+  } as any)
+const PigeonNetInstallationMumbaiRoute =
+  PigeonNetInstallationMumbaiRouteImport.update({
+    id: '/pigeon-net-installation-mumbai',
+    path: '/pigeon-net-installation-mumbai',
     getParentRoute: () => rootRouteImport,
   } as any)
 const PrivacyRoute = PrivacyRouteImport.update({
@@ -177,6 +251,12 @@ const WindowRepairGoregaonMaladRoute =
     path: '/window-repair-goregaon-malad',
     getParentRoute: () => rootRouteImport,
   } as any)
+const WindowRepairKandivaliBorivaliRoute =
+  WindowRepairKandivaliBorivaliRouteImport.update({
+    id: '/window-repair-kandivali-borivali',
+    path: '/window-repair-kandivali-borivali',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const WindowRepairKanjurmargBhandupRoute =
   WindowRepairKanjurmargBhandupRouteImport.update({
     id: '/window-repair-kanjurmarg-bhandup',
@@ -211,6 +291,11 @@ const WindowRepairSouthMumbaiCuffeParadeRoute =
     path: '/window-repair-south-mumbai-cuffe-parade',
     getParentRoute: () => rootRouteImport,
   } as any)
+const WindowRepairThaneRoute = WindowRepairThaneRouteImport.update({
+  id: '/window-repair-thane',
+  path: '/window-repair-thane',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const WindowRepairVikhroliGhatkoparRoute =
   WindowRepairVikhroliGhatkoparRouteImport.update({
     id: '/window-repair-vikhroli-ghatkopar',
@@ -236,11 +321,22 @@ const WindowTrackRepairPowaiRoute = WindowTrackRepairPowaiRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/aluminium-door-installation-mumbai': typeof AluminiumDoorInstallationMumbaiRoute
+  '/aluminium-kitchen-cupboard-mumbai': typeof AluminiumKitchenCupboardMumbaiRoute
+  '/aluminium-partition-installation-mumbai': typeof AluminiumPartitionInstallationMumbaiRoute
   '/aluminium-partition-repair-mumbai': typeof AluminiumPartitionRepairMumbaiRoute
   '/aluminium-window-repair-powai': typeof AluminiumWindowRepairPowaiRoute
+  '/bathroom-window-mumbai': typeof BathroomWindowMumbaiRoute
   '/custom-window-modification-mumbai': typeof CustomWindowModificationMumbaiRoute
   '/domal-window-repair-mumbai': typeof DomalWindowRepairMumbaiRoute
+  '/french-windows-mumbai': typeof FrenchWindowsMumbaiRoute
+  '/glass-balcony-railing-mumbai': typeof GlassBalconyRailingMumbaiRoute
+  '/glass-partition-mumbai': typeof GlassPartitionMumbaiRoute
+  '/glass-shop-powai': typeof GlassShopPowaiRoute
+  '/invisible-grills-mumbai': typeof InvisibleGrillsMumbaiRoute
+  '/mosquito-net-sliding-window-mumbai': typeof MosquitoNetSlidingWindowMumbaiRoute
   '/new-window-installation-mumbai': typeof NewWindowInstallationMumbaiRoute
+  '/pigeon-net-installation-mumbai': typeof PigeonNetInstallationMumbaiRoute
   '/privacy': typeof PrivacyRoute
   '/rubber-gasket-sealing-mumbai': typeof RubberGasketSealingMumbaiRoute
   '/safety-nets-installation-mumbai': typeof SafetyNetsInstallationMumbaiRoute
@@ -259,12 +355,14 @@ export interface FileRoutesByFullPath {
   '/window-repair-colaba-fort': typeof WindowRepairColabaFortRoute
   '/window-repair-dadar-mahim': typeof WindowRepairDadarMahimRoute
   '/window-repair-goregaon-malad': typeof WindowRepairGoregaonMaladRoute
+  '/window-repair-kandivali-borivali': typeof WindowRepairKandivaliBorivaliRoute
   '/window-repair-kanjurmarg-bhandup': typeof WindowRepairKanjurmargBhandupRoute
   '/window-repair-mulund-nahur': typeof WindowRepairMulundNahurRoute
   '/window-repair-mumbai': typeof WindowRepairMumbaiRoute
   '/window-repair-powai-hiranandani': typeof WindowRepairPowaiHiranandaniRoute
   '/window-repair-santacruz-khar': typeof WindowRepairSantacruzKharRoute
   '/window-repair-south-mumbai-cuffe-parade': typeof WindowRepairSouthMumbaiCuffeParadeRoute
+  '/window-repair-thane': typeof WindowRepairThaneRoute
   '/window-repair-vikhroli-ghatkopar': typeof WindowRepairVikhroliGhatkoparRoute
   '/window-repair-worli-prabhadevi': typeof WindowRepairWorliPrabhadeviRoute
   '/window-roller-repair-powai': typeof WindowRollerRepairPowaiRoute
@@ -272,11 +370,22 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/aluminium-door-installation-mumbai': typeof AluminiumDoorInstallationMumbaiRoute
+  '/aluminium-kitchen-cupboard-mumbai': typeof AluminiumKitchenCupboardMumbaiRoute
+  '/aluminium-partition-installation-mumbai': typeof AluminiumPartitionInstallationMumbaiRoute
   '/aluminium-partition-repair-mumbai': typeof AluminiumPartitionRepairMumbaiRoute
   '/aluminium-window-repair-powai': typeof AluminiumWindowRepairPowaiRoute
+  '/bathroom-window-mumbai': typeof BathroomWindowMumbaiRoute
   '/custom-window-modification-mumbai': typeof CustomWindowModificationMumbaiRoute
   '/domal-window-repair-mumbai': typeof DomalWindowRepairMumbaiRoute
+  '/french-windows-mumbai': typeof FrenchWindowsMumbaiRoute
+  '/glass-balcony-railing-mumbai': typeof GlassBalconyRailingMumbaiRoute
+  '/glass-partition-mumbai': typeof GlassPartitionMumbaiRoute
+  '/glass-shop-powai': typeof GlassShopPowaiRoute
+  '/invisible-grills-mumbai': typeof InvisibleGrillsMumbaiRoute
+  '/mosquito-net-sliding-window-mumbai': typeof MosquitoNetSlidingWindowMumbaiRoute
   '/new-window-installation-mumbai': typeof NewWindowInstallationMumbaiRoute
+  '/pigeon-net-installation-mumbai': typeof PigeonNetInstallationMumbaiRoute
   '/privacy': typeof PrivacyRoute
   '/rubber-gasket-sealing-mumbai': typeof RubberGasketSealingMumbaiRoute
   '/safety-nets-installation-mumbai': typeof SafetyNetsInstallationMumbaiRoute
@@ -295,12 +404,14 @@ export interface FileRoutesByTo {
   '/window-repair-colaba-fort': typeof WindowRepairColabaFortRoute
   '/window-repair-dadar-mahim': typeof WindowRepairDadarMahimRoute
   '/window-repair-goregaon-malad': typeof WindowRepairGoregaonMaladRoute
+  '/window-repair-kandivali-borivali': typeof WindowRepairKandivaliBorivaliRoute
   '/window-repair-kanjurmarg-bhandup': typeof WindowRepairKanjurmargBhandupRoute
   '/window-repair-mulund-nahur': typeof WindowRepairMulundNahurRoute
   '/window-repair-mumbai': typeof WindowRepairMumbaiRoute
   '/window-repair-powai-hiranandani': typeof WindowRepairPowaiHiranandaniRoute
   '/window-repair-santacruz-khar': typeof WindowRepairSantacruzKharRoute
   '/window-repair-south-mumbai-cuffe-parade': typeof WindowRepairSouthMumbaiCuffeParadeRoute
+  '/window-repair-thane': typeof WindowRepairThaneRoute
   '/window-repair-vikhroli-ghatkopar': typeof WindowRepairVikhroliGhatkoparRoute
   '/window-repair-worli-prabhadevi': typeof WindowRepairWorliPrabhadeviRoute
   '/window-roller-repair-powai': typeof WindowRollerRepairPowaiRoute
@@ -309,11 +420,22 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/aluminium-door-installation-mumbai': typeof AluminiumDoorInstallationMumbaiRoute
+  '/aluminium-kitchen-cupboard-mumbai': typeof AluminiumKitchenCupboardMumbaiRoute
+  '/aluminium-partition-installation-mumbai': typeof AluminiumPartitionInstallationMumbaiRoute
   '/aluminium-partition-repair-mumbai': typeof AluminiumPartitionRepairMumbaiRoute
   '/aluminium-window-repair-powai': typeof AluminiumWindowRepairPowaiRoute
+  '/bathroom-window-mumbai': typeof BathroomWindowMumbaiRoute
   '/custom-window-modification-mumbai': typeof CustomWindowModificationMumbaiRoute
   '/domal-window-repair-mumbai': typeof DomalWindowRepairMumbaiRoute
+  '/french-windows-mumbai': typeof FrenchWindowsMumbaiRoute
+  '/glass-balcony-railing-mumbai': typeof GlassBalconyRailingMumbaiRoute
+  '/glass-partition-mumbai': typeof GlassPartitionMumbaiRoute
+  '/glass-shop-powai': typeof GlassShopPowaiRoute
+  '/invisible-grills-mumbai': typeof InvisibleGrillsMumbaiRoute
+  '/mosquito-net-sliding-window-mumbai': typeof MosquitoNetSlidingWindowMumbaiRoute
   '/new-window-installation-mumbai': typeof NewWindowInstallationMumbaiRoute
+  '/pigeon-net-installation-mumbai': typeof PigeonNetInstallationMumbaiRoute
   '/privacy': typeof PrivacyRoute
   '/rubber-gasket-sealing-mumbai': typeof RubberGasketSealingMumbaiRoute
   '/safety-nets-installation-mumbai': typeof SafetyNetsInstallationMumbaiRoute
@@ -332,12 +454,14 @@ export interface FileRoutesById {
   '/window-repair-colaba-fort': typeof WindowRepairColabaFortRoute
   '/window-repair-dadar-mahim': typeof WindowRepairDadarMahimRoute
   '/window-repair-goregaon-malad': typeof WindowRepairGoregaonMaladRoute
+  '/window-repair-kandivali-borivali': typeof WindowRepairKandivaliBorivaliRoute
   '/window-repair-kanjurmarg-bhandup': typeof WindowRepairKanjurmargBhandupRoute
   '/window-repair-mulund-nahur': typeof WindowRepairMulundNahurRoute
   '/window-repair-mumbai': typeof WindowRepairMumbaiRoute
   '/window-repair-powai-hiranandani': typeof WindowRepairPowaiHiranandaniRoute
   '/window-repair-santacruz-khar': typeof WindowRepairSantacruzKharRoute
   '/window-repair-south-mumbai-cuffe-parade': typeof WindowRepairSouthMumbaiCuffeParadeRoute
+  '/window-repair-thane': typeof WindowRepairThaneRoute
   '/window-repair-vikhroli-ghatkopar': typeof WindowRepairVikhroliGhatkoparRoute
   '/window-repair-worli-prabhadevi': typeof WindowRepairWorliPrabhadeviRoute
   '/window-roller-repair-powai': typeof WindowRollerRepairPowaiRoute
@@ -347,11 +471,22 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/aluminium-door-installation-mumbai'
+    | '/aluminium-kitchen-cupboard-mumbai'
+    | '/aluminium-partition-installation-mumbai'
     | '/aluminium-partition-repair-mumbai'
     | '/aluminium-window-repair-powai'
+    | '/bathroom-window-mumbai'
     | '/custom-window-modification-mumbai'
     | '/domal-window-repair-mumbai'
+    | '/french-windows-mumbai'
+    | '/glass-balcony-railing-mumbai'
+    | '/glass-partition-mumbai'
+    | '/glass-shop-powai'
+    | '/invisible-grills-mumbai'
+    | '/mosquito-net-sliding-window-mumbai'
     | '/new-window-installation-mumbai'
+    | '/pigeon-net-installation-mumbai'
     | '/privacy'
     | '/rubber-gasket-sealing-mumbai'
     | '/safety-nets-installation-mumbai'
@@ -370,12 +505,14 @@ export interface FileRouteTypes {
     | '/window-repair-colaba-fort'
     | '/window-repair-dadar-mahim'
     | '/window-repair-goregaon-malad'
+    | '/window-repair-kandivali-borivali'
     | '/window-repair-kanjurmarg-bhandup'
     | '/window-repair-mulund-nahur'
     | '/window-repair-mumbai'
     | '/window-repair-powai-hiranandani'
     | '/window-repair-santacruz-khar'
     | '/window-repair-south-mumbai-cuffe-parade'
+    | '/window-repair-thane'
     | '/window-repair-vikhroli-ghatkopar'
     | '/window-repair-worli-prabhadevi'
     | '/window-roller-repair-powai'
@@ -383,11 +520,22 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/aluminium-door-installation-mumbai'
+    | '/aluminium-kitchen-cupboard-mumbai'
+    | '/aluminium-partition-installation-mumbai'
     | '/aluminium-partition-repair-mumbai'
     | '/aluminium-window-repair-powai'
+    | '/bathroom-window-mumbai'
     | '/custom-window-modification-mumbai'
     | '/domal-window-repair-mumbai'
+    | '/french-windows-mumbai'
+    | '/glass-balcony-railing-mumbai'
+    | '/glass-partition-mumbai'
+    | '/glass-shop-powai'
+    | '/invisible-grills-mumbai'
+    | '/mosquito-net-sliding-window-mumbai'
     | '/new-window-installation-mumbai'
+    | '/pigeon-net-installation-mumbai'
     | '/privacy'
     | '/rubber-gasket-sealing-mumbai'
     | '/safety-nets-installation-mumbai'
@@ -406,12 +554,14 @@ export interface FileRouteTypes {
     | '/window-repair-colaba-fort'
     | '/window-repair-dadar-mahim'
     | '/window-repair-goregaon-malad'
+    | '/window-repair-kandivali-borivali'
     | '/window-repair-kanjurmarg-bhandup'
     | '/window-repair-mulund-nahur'
     | '/window-repair-mumbai'
     | '/window-repair-powai-hiranandani'
     | '/window-repair-santacruz-khar'
     | '/window-repair-south-mumbai-cuffe-parade'
+    | '/window-repair-thane'
     | '/window-repair-vikhroli-ghatkopar'
     | '/window-repair-worli-prabhadevi'
     | '/window-roller-repair-powai'
@@ -419,11 +569,22 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/aluminium-door-installation-mumbai'
+    | '/aluminium-kitchen-cupboard-mumbai'
+    | '/aluminium-partition-installation-mumbai'
     | '/aluminium-partition-repair-mumbai'
     | '/aluminium-window-repair-powai'
+    | '/bathroom-window-mumbai'
     | '/custom-window-modification-mumbai'
     | '/domal-window-repair-mumbai'
+    | '/french-windows-mumbai'
+    | '/glass-balcony-railing-mumbai'
+    | '/glass-partition-mumbai'
+    | '/glass-shop-powai'
+    | '/invisible-grills-mumbai'
+    | '/mosquito-net-sliding-window-mumbai'
     | '/new-window-installation-mumbai'
+    | '/pigeon-net-installation-mumbai'
     | '/privacy'
     | '/rubber-gasket-sealing-mumbai'
     | '/safety-nets-installation-mumbai'
@@ -442,12 +603,14 @@ export interface FileRouteTypes {
     | '/window-repair-colaba-fort'
     | '/window-repair-dadar-mahim'
     | '/window-repair-goregaon-malad'
+    | '/window-repair-kandivali-borivali'
     | '/window-repair-kanjurmarg-bhandup'
     | '/window-repair-mulund-nahur'
     | '/window-repair-mumbai'
     | '/window-repair-powai-hiranandani'
     | '/window-repair-santacruz-khar'
     | '/window-repair-south-mumbai-cuffe-parade'
+    | '/window-repair-thane'
     | '/window-repair-vikhroli-ghatkopar'
     | '/window-repair-worli-prabhadevi'
     | '/window-roller-repair-powai'
@@ -456,11 +619,22 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AluminiumDoorInstallationMumbaiRoute: typeof AluminiumDoorInstallationMumbaiRoute
+  AluminiumKitchenCupboardMumbaiRoute: typeof AluminiumKitchenCupboardMumbaiRoute
+  AluminiumPartitionInstallationMumbaiRoute: typeof AluminiumPartitionInstallationMumbaiRoute
   AluminiumPartitionRepairMumbaiRoute: typeof AluminiumPartitionRepairMumbaiRoute
   AluminiumWindowRepairPowaiRoute: typeof AluminiumWindowRepairPowaiRoute
+  BathroomWindowMumbaiRoute: typeof BathroomWindowMumbaiRoute
   CustomWindowModificationMumbaiRoute: typeof CustomWindowModificationMumbaiRoute
   DomalWindowRepairMumbaiRoute: typeof DomalWindowRepairMumbaiRoute
+  FrenchWindowsMumbaiRoute: typeof FrenchWindowsMumbaiRoute
+  GlassBalconyRailingMumbaiRoute: typeof GlassBalconyRailingMumbaiRoute
+  GlassPartitionMumbaiRoute: typeof GlassPartitionMumbaiRoute
+  GlassShopPowaiRoute: typeof GlassShopPowaiRoute
+  InvisibleGrillsMumbaiRoute: typeof InvisibleGrillsMumbaiRoute
+  MosquitoNetSlidingWindowMumbaiRoute: typeof MosquitoNetSlidingWindowMumbaiRoute
   NewWindowInstallationMumbaiRoute: typeof NewWindowInstallationMumbaiRoute
+  PigeonNetInstallationMumbaiRoute: typeof PigeonNetInstallationMumbaiRoute
   PrivacyRoute: typeof PrivacyRoute
   RubberGasketSealingMumbaiRoute: typeof RubberGasketSealingMumbaiRoute
   SafetyNetsInstallationMumbaiRoute: typeof SafetyNetsInstallationMumbaiRoute
@@ -479,12 +653,14 @@ export interface RootRouteChildren {
   WindowRepairColabaFortRoute: typeof WindowRepairColabaFortRoute
   WindowRepairDadarMahimRoute: typeof WindowRepairDadarMahimRoute
   WindowRepairGoregaonMaladRoute: typeof WindowRepairGoregaonMaladRoute
+  WindowRepairKandivaliBorivaliRoute: typeof WindowRepairKandivaliBorivaliRoute
   WindowRepairKanjurmargBhandupRoute: typeof WindowRepairKanjurmargBhandupRoute
   WindowRepairMulundNahurRoute: typeof WindowRepairMulundNahurRoute
   WindowRepairMumbaiRoute: typeof WindowRepairMumbaiRoute
   WindowRepairPowaiHiranandaniRoute: typeof WindowRepairPowaiHiranandaniRoute
   WindowRepairSantacruzKharRoute: typeof WindowRepairSantacruzKharRoute
   WindowRepairSouthMumbaiCuffeParadeRoute: typeof WindowRepairSouthMumbaiCuffeParadeRoute
+  WindowRepairThaneRoute: typeof WindowRepairThaneRoute
   WindowRepairVikhroliGhatkoparRoute: typeof WindowRepairVikhroliGhatkoparRoute
   WindowRepairWorliPrabhadeviRoute: typeof WindowRepairWorliPrabhadeviRoute
   WindowRollerRepairPowaiRoute: typeof WindowRollerRepairPowaiRoute
@@ -498,6 +674,27 @@ declare module '@tanstack/react-router' {
       path: '/'
       fullPath: '/'
       preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aluminium-door-installation-mumbai': {
+      id: '/aluminium-door-installation-mumbai'
+      path: '/aluminium-door-installation-mumbai'
+      fullPath: '/aluminium-door-installation-mumbai'
+      preLoaderRoute: typeof AluminiumDoorInstallationMumbaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aluminium-kitchen-cupboard-mumbai': {
+      id: '/aluminium-kitchen-cupboard-mumbai'
+      path: '/aluminium-kitchen-cupboard-mumbai'
+      fullPath: '/aluminium-kitchen-cupboard-mumbai'
+      preLoaderRoute: typeof AluminiumKitchenCupboardMumbaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/aluminium-partition-installation-mumbai': {
+      id: '/aluminium-partition-installation-mumbai'
+      path: '/aluminium-partition-installation-mumbai'
+      fullPath: '/aluminium-partition-installation-mumbai'
+      preLoaderRoute: typeof AluminiumPartitionInstallationMumbaiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/aluminium-partition-repair-mumbai': {
@@ -514,6 +711,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AluminiumWindowRepairPowaiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/bathroom-window-mumbai': {
+      id: '/bathroom-window-mumbai'
+      path: '/bathroom-window-mumbai'
+      fullPath: '/bathroom-window-mumbai'
+      preLoaderRoute: typeof BathroomWindowMumbaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/custom-window-modification-mumbai': {
       id: '/custom-window-modification-mumbai'
       path: '/custom-window-modification-mumbai'
@@ -528,11 +732,60 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DomalWindowRepairMumbaiRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/french-windows-mumbai': {
+      id: '/french-windows-mumbai'
+      path: '/french-windows-mumbai'
+      fullPath: '/french-windows-mumbai'
+      preLoaderRoute: typeof FrenchWindowsMumbaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/glass-balcony-railing-mumbai': {
+      id: '/glass-balcony-railing-mumbai'
+      path: '/glass-balcony-railing-mumbai'
+      fullPath: '/glass-balcony-railing-mumbai'
+      preLoaderRoute: typeof GlassBalconyRailingMumbaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/glass-partition-mumbai': {
+      id: '/glass-partition-mumbai'
+      path: '/glass-partition-mumbai'
+      fullPath: '/glass-partition-mumbai'
+      preLoaderRoute: typeof GlassPartitionMumbaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/glass-shop-powai': {
+      id: '/glass-shop-powai'
+      path: '/glass-shop-powai'
+      fullPath: '/glass-shop-powai'
+      preLoaderRoute: typeof GlassShopPowaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/invisible-grills-mumbai': {
+      id: '/invisible-grills-mumbai'
+      path: '/invisible-grills-mumbai'
+      fullPath: '/invisible-grills-mumbai'
+      preLoaderRoute: typeof InvisibleGrillsMumbaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/mosquito-net-sliding-window-mumbai': {
+      id: '/mosquito-net-sliding-window-mumbai'
+      path: '/mosquito-net-sliding-window-mumbai'
+      fullPath: '/mosquito-net-sliding-window-mumbai'
+      preLoaderRoute: typeof MosquitoNetSlidingWindowMumbaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/new-window-installation-mumbai': {
       id: '/new-window-installation-mumbai'
       path: '/new-window-installation-mumbai'
       fullPath: '/new-window-installation-mumbai'
       preLoaderRoute: typeof NewWindowInstallationMumbaiRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/pigeon-net-installation-mumbai': {
+      id: '/pigeon-net-installation-mumbai'
+      path: '/pigeon-net-installation-mumbai'
+      fullPath: '/pigeon-net-installation-mumbai'
+      preLoaderRoute: typeof PigeonNetInstallationMumbaiRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/privacy': {
@@ -661,6 +914,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WindowRepairGoregaonMaladRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/window-repair-kandivali-borivali': {
+      id: '/window-repair-kandivali-borivali'
+      path: '/window-repair-kandivali-borivali'
+      fullPath: '/window-repair-kandivali-borivali'
+      preLoaderRoute: typeof WindowRepairKandivaliBorivaliRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/window-repair-kanjurmarg-bhandup': {
       id: '/window-repair-kanjurmarg-bhandup'
       path: '/window-repair-kanjurmarg-bhandup'
@@ -703,6 +963,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof WindowRepairSouthMumbaiCuffeParadeRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/window-repair-thane': {
+      id: '/window-repair-thane'
+      path: '/window-repair-thane'
+      fullPath: '/window-repair-thane'
+      preLoaderRoute: typeof WindowRepairThaneRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/window-repair-vikhroli-ghatkopar': {
       id: '/window-repair-vikhroli-ghatkopar'
       path: '/window-repair-vikhroli-ghatkopar'
@@ -736,11 +1003,23 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AluminiumDoorInstallationMumbaiRoute: AluminiumDoorInstallationMumbaiRoute,
+  AluminiumKitchenCupboardMumbaiRoute: AluminiumKitchenCupboardMumbaiRoute,
+  AluminiumPartitionInstallationMumbaiRoute:
+    AluminiumPartitionInstallationMumbaiRoute,
   AluminiumPartitionRepairMumbaiRoute: AluminiumPartitionRepairMumbaiRoute,
   AluminiumWindowRepairPowaiRoute: AluminiumWindowRepairPowaiRoute,
+  BathroomWindowMumbaiRoute: BathroomWindowMumbaiRoute,
   CustomWindowModificationMumbaiRoute: CustomWindowModificationMumbaiRoute,
   DomalWindowRepairMumbaiRoute: DomalWindowRepairMumbaiRoute,
+  FrenchWindowsMumbaiRoute: FrenchWindowsMumbaiRoute,
+  GlassBalconyRailingMumbaiRoute: GlassBalconyRailingMumbaiRoute,
+  GlassPartitionMumbaiRoute: GlassPartitionMumbaiRoute,
+  GlassShopPowaiRoute: GlassShopPowaiRoute,
+  InvisibleGrillsMumbaiRoute: InvisibleGrillsMumbaiRoute,
+  MosquitoNetSlidingWindowMumbaiRoute: MosquitoNetSlidingWindowMumbaiRoute,
   NewWindowInstallationMumbaiRoute: NewWindowInstallationMumbaiRoute,
+  PigeonNetInstallationMumbaiRoute: PigeonNetInstallationMumbaiRoute,
   PrivacyRoute: PrivacyRoute,
   RubberGasketSealingMumbaiRoute: RubberGasketSealingMumbaiRoute,
   SafetyNetsInstallationMumbaiRoute: SafetyNetsInstallationMumbaiRoute,
@@ -759,6 +1038,7 @@ const rootRouteChildren: RootRouteChildren = {
   WindowRepairColabaFortRoute: WindowRepairColabaFortRoute,
   WindowRepairDadarMahimRoute: WindowRepairDadarMahimRoute,
   WindowRepairGoregaonMaladRoute: WindowRepairGoregaonMaladRoute,
+  WindowRepairKandivaliBorivaliRoute: WindowRepairKandivaliBorivaliRoute,
   WindowRepairKanjurmargBhandupRoute: WindowRepairKanjurmargBhandupRoute,
   WindowRepairMulundNahurRoute: WindowRepairMulundNahurRoute,
   WindowRepairMumbaiRoute: WindowRepairMumbaiRoute,
@@ -766,6 +1046,7 @@ const rootRouteChildren: RootRouteChildren = {
   WindowRepairSantacruzKharRoute: WindowRepairSantacruzKharRoute,
   WindowRepairSouthMumbaiCuffeParadeRoute:
     WindowRepairSouthMumbaiCuffeParadeRoute,
+  WindowRepairThaneRoute: WindowRepairThaneRoute,
   WindowRepairVikhroliGhatkoparRoute: WindowRepairVikhroliGhatkoparRoute,
   WindowRepairWorliPrabhadeviRoute: WindowRepairWorliPrabhadeviRoute,
   WindowRollerRepairPowaiRoute: WindowRollerRepairPowaiRoute,

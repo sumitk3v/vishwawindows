@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { Link } from "@tanstack/react-router";
-import heroVideo from "@/assets/videos/hero.mp4";
-import heroPoster from "@/assets/images/hero-poster.jpg";
+import heroVideo from "@/assets/videos/hero-sliding-window-pigeon-net-installation-mumbai.mp4";
+import heroPoster from "@/assets/images/hero-sliding-window-pigeon-net-installation-mumbai.jpg";
 import { business } from "@/config/business";
 import { track } from "@/lib/analytics";
 import { CallButton, WhatsAppButton } from "./cta";
@@ -34,8 +34,11 @@ export function Hero() {
               ATTENTION MUMBAI: STUCK SLIDING WINDOW? READ THIS.
             </span>
           </div>
-          
+
           <h1 className="hero-h1 max-w-2xl font-extrabold uppercase tracking-tight text-white font-display">
+            <span className="mb-3 block text-sm sm:text-base font-bold normal-case tracking-normal text-accent font-sans">
+              Sliding Window Repair, Invisible Grills &amp; Pigeon Nets in Powai, Mumbai
+            </span>
             Don't Pay <span className="highlighter">₹15,000</span> For New Windows When Your Old Ones Just Need A <span className="text-red-500">45-Minute Fix</span>
           </h1>
           <p className="hero-sub mt-4 sm:mt-6 max-w-lg font-medium text-primary-foreground/90">
@@ -64,6 +67,30 @@ export function Hero() {
             <span>✅ Zero Civil Work</span>
           </div>
 
+          <nav aria-label="Popular services" className="mt-5">
+            <p className="text-xs font-bold uppercase tracking-wider text-primary-foreground/70">
+              Looking for something else?
+            </p>
+            <ul className="mt-2 flex flex-wrap gap-2">
+              {[
+                { to: "/pigeon-net-installation-mumbai", label: "Pigeon Net" },
+                { to: "/invisible-grills-mumbai", label: "Invisible Grill" },
+                { to: "/new-window-installation-mumbai", label: "New Sliding Windows" },
+                { to: "/glass-shop-powai", label: "Glass Work" },
+                { to: "/aluminium-door-installation-mumbai", label: "Bathroom Door" },
+              ].map((s) => (
+                <li key={s.to}>
+                  <Link
+                    to={s.to}
+                    className="inline-flex min-h-[44px] items-center rounded-full border border-white/30 bg-white/10 px-4 text-sm font-semibold text-white hover:border-accent hover:text-accent transition-colors"
+                  >
+                    {s.label} →
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+
           <div className="mt-5 rounded-xl bg-white/10 border border-white/20 p-3 text-left">
             <Link
               to="/new-window-installation-mumbai"
@@ -88,7 +115,7 @@ export function Hero() {
               href={googleProfileUrl}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="View Vishwa Works 4.9-star customer reviews on Google Maps"
+              aria-label="View Vishwa Windows 4.9-star customer reviews on Google Maps"
               onClick={() => track("google_profile_click", { location: "hero" })}
               className="mt-4 mx-auto flex w-fit items-center justify-center gap-2 sm:gap-3 rounded-full bg-gradient-to-b from-gray-50 to-gray-200 px-4 py-2 sm:px-6 sm:py-2.5 shadow-md transition-transform hover:scale-[1.02]"
             >
@@ -114,7 +141,7 @@ export function Hero() {
               <span className="text-emerald-400">Just show us the problem.</span>
             </p>
           </div>
-          
+
           <div className="mt-8 border-t border-primary-foreground/10 pt-6 grid grid-cols-2 gap-6 sm:grid-cols-3">
             <div>
               <p className="text-3xl font-extrabold text-primary-foreground font-display">1,200+</p>
@@ -164,7 +191,7 @@ export function Hero() {
                 +Pigeon &amp; Safety Net
               </span>
 
-              <span 
+              <span
                 className="absolute z-10 text-4xl animate-bounce"
                 style={{ bottom: "calc(50% + 56px)" }}
               >

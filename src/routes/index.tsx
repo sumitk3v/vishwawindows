@@ -23,13 +23,13 @@ import {
   RealWorkGallery,
 } from "@/components/site/Sections";
 import { faqs } from "@/config/business";
-import { business } from "@/config/business";
-import heroVideo from "@/assets/videos/hero.mp4";
-import heroPoster from "@/assets/images/hero-poster.jpg";
+import { business, businessPostalAddress } from "@/config/business";
+import heroVideo from "@/assets/videos/hero-sliding-window-pigeon-net-installation-mumbai.mp4";
+import heroPoster from "@/assets/images/hero-sliding-window-pigeon-net-installation-mumbai.jpg";
 
-const title = "Sliding Glass Door & Window Repair Near Me Mumbai | Rollers, Wheels & Track Fix";
+const title = "Window Repair Near Me in Powai, Mumbai | Sliding Windows, Pigeon Nets";
 const description =
-  "Searching for sliding glass door repair near me or aluminium sliding window repair in Mumbai? We fix jammed window sliders, replace rollers, wheels, tracks, locks & broken glass. Same-day doorstep service.";
+  "Sliding window repair, new aluminium sliding windows, pigeon nets, invisible grills, toughened glass, bathroom doors & partitions from our IIT Market, Powai workshop. Free WhatsApp estimate.";
 const liveUrl = business.siteUrl;
 
 export const Route = createFileRoute("/")({
@@ -49,7 +49,7 @@ export const Route = createFileRoute("/")({
     ],
     links: [
       { rel: "canonical", href: `${liveUrl}/` },
-      { rel: "preload", as: "image", href: heroPoster, fetchPriority: "high" }
+      { rel: "preload", as: "image", href: heroPoster, fetchPriority: "high" },
     ],
     scripts: [
       {
@@ -63,28 +63,16 @@ export const Route = createFileRoute("/")({
           url: liveUrl,
           telephone: business.phone,
           priceRange: "₹₹",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.9",
-            reviewCount: "128"
-          },
           areaServed: business.serviceAreas.map((a) => ({
             "@type": "Place",
-            name: `${a}, Mumbai`,
+            name: a === "Thane" ? "Thane" : `${a}, Mumbai`,
           })),
-          address: {
-            "@type": "PostalAddress",
-            "streetAddress": business.address,
-            "addressLocality": "Powai, Mumbai",
-            "addressRegion": "Maharashtra",
-            "postalCode": "400076",
-            "addressCountry": "IN",
-          },
+          address: businessPostalAddress,
           hasMap: business.googleBusinessProfileUrl,
           sameAs: [
             business.googleBusinessProfileUrl,
             "https://www.facebook.com/vishwawindows",
-            "https://www.instagram.com/vishwawindows"
+            "https://www.instagram.com/vishwawindows",
           ],
           ...(business.hours ? { openingHours: business.hours } : {}),
         }),
@@ -119,7 +107,7 @@ function Index() {
         <ProblemSelector />
         <FoundersStory />
         <UsVsThem />
-        
+
         {/* Phase 2: The Godfather Offer & Solution */}
         <Offer />
         <Benefits />
@@ -135,7 +123,7 @@ function Index() {
         <Services />
         <WhyChooseUs />
         <Disqualifiers />
-        
+
         {/* Phase 5: Closing */}
         <ServiceAreas />
         <Faq />

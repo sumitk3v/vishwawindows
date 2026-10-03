@@ -40,7 +40,7 @@ export function WhatsAppButton({
       aria-label={
         ariaLabel ||
         (message === whatsappMessages.default
-          ? "Contact Vishwa Works on WhatsApp for Free Window Repair Diagnosis"
+          ? "Contact Vishwa Windows on WhatsApp for Free Window Repair Diagnosis"
           : undefined)
       }
       onClick={() => track("whatsapp_click", { location })}
@@ -80,7 +80,7 @@ export function CallButton({
   return (
     <a
       href={business.phoneHref}
-      aria-label={ariaLabel || `Call Vishwa Works Window Repair at ${business.phone}`}
+      aria-label={ariaLabel || `Call Vishwa Windows at ${business.phone}`}
       onClick={() => track("call_click", { location })}
       className={cn(
         base,

@@ -5,7 +5,7 @@
 
 export const business = {
   // Business details
-  name: "Vishwa Works",
+  name: "Vishwa Windows",
   founder: "Sumit Vishwakarma",
   tagline: "Show Us The Problem.",
   siteUrl: "https://vishwaworks.vercel.app",
@@ -23,7 +23,7 @@ export const business = {
   googleBusinessProfileUrl: "https://share.google/27mPvbYlLW7SoJ3rP",
   // Shown until the profile link above is added.
   googleMapsSearchUrl:
-    "https://www.google.com/maps/search/?api=1&query=Vishwa+Windows+window+repair+Powai+Mumbai",
+    "https://www.google.com/maps/search/?api=1&query=Vishwa+Windows+IIT+Market+Powai+Mumbai",
   // Leave empty until the real working hours are confirmed. Empty = not shown.
   hours: "",
 
@@ -46,8 +46,20 @@ export const business = {
     "Chembur & Sion",
     "BKC & Kurla",
     "Colaba & Fort",
+    "Kandivali & Borivali",
+    "Thane",
     "Premium Mumbai Complexes",
   ],
+} as const;
+
+/** Schema.org PostalAddress for the real workshop. Used in all structured data. */
+export const businessPostalAddress = {
+  "@type": "PostalAddress",
+  streetAddress: "Shop no S/159/160 IIT Market, Near IIT Mumbai College, Jyotiba Phule Nagar",
+  addressLocality: "Powai, Mumbai",
+  addressRegion: "Maharashtra",
+  postalCode: "400076",
+  addressCountry: "IN",
 } as const;
 
 export const whatsappMessages = {
@@ -81,32 +93,41 @@ export const serviceCategories = [
   {
     category: "Core Window & Door Repairs",
     items: [
-      { name: "Sliding Glass Door Repair Mumbai", desc: "Looking for sliding glass door repair near me? Heavy balcony door stuck, off-track, or dragging? We fix it fast." },
-      { name: "Aluminium Sliding Window Repair", desc: "Trouble opening or closing? We fix jammed sliding windows and window sliders instantly. Send a photo for quick diagnosis." },
-      { name: "Sliding Window Roller & Wheels Replacement", desc: "We provide sliding window wheels replacement, new rollers for sliding glass doors, and track repair to restore effortless sliding." },
-      { name: "Lock & Latch Replacement", desc: "Replace sliding glass door locks, aluminium latches and handles for smooth & secure operation." },
-      { name: "Window Glass Replacement", desc: "Cracked or broken sliding door glass repair and window glass pane replacement with safe cleanup." },
-      { name: "Window Alignment & Maintenance", desc: "Perfect alignment for smooth operation, track degreasing, and complete servicing for effortless glide." },
+      { name: "Sliding Glass Door Repair Mumbai", path: "/sliding-door-repair-powai", desc: "Looking for sliding glass door repair near me? Heavy balcony door stuck, off-track, or dragging? We fix it fast." },
+      { name: "Aluminium Sliding Window Repair", path: "/sliding-window-repair-powai", desc: "Trouble opening or closing? We fix jammed sliding windows and window sliders instantly. Send a photo for quick diagnosis." },
+      { name: "Sliding Window Roller & Wheels Replacement", path: "/window-roller-repair-powai", desc: "We provide sliding window wheels replacement, new rollers for sliding glass doors, and track repair to restore effortless sliding." },
+      { name: "Lock & Latch Replacement", path: "/window-lock-repair-powai", desc: "Replace sliding glass door locks, aluminium latches and handles for smooth & secure operation." },
+      { name: "Window Glass Replacement", path: "/window-glass-replacement-powai", desc: "Cracked or broken sliding door glass repair and window glass pane replacement with safe cleanup." },
+      { name: "Glass Shop & Toughened Glass", path: "/glass-shop-powai", desc: "Window glass, toughened (tuffen) glass, frosted bathroom glass and mirrors cut to size and fitted from our IIT Market, Powai workshop." },
+      { name: "Window Alignment & Maintenance", path: "/window-alignment-maintenance-mumbai", desc: "Perfect alignment for smooth operation, track degreasing, and complete servicing for effortless glide." },
     ]
   },
   {
     category: "Specialty Upgrades & Installations",
     items: [
-      { name: "Soundproof Window Upgrades", desc: "Improve noise insulation with acoustic double glass. Sleep peacefully without traffic or monsoon noise." },
-      { name: "Domal & Slim Domal Windows", desc: "Professional repair, heavy bearing replacement, and servicing for premium Domal sliding doors & windows." },
-      { name: "Pigeon & Mosquito Safety Nets", desc: "Reliable balcony & window protection. Pleated sliding screens, insect mesh, or fixed nylon bird nets." },
-      { name: "Rubber, Gasket & Silicone Sealing", desc: "Stop water leakage, drafts & black dust. High-durability EPDM rubber seals and monsoon waterproofing." },
-      { name: "Aluminium Partition & Shutter Repair", desc: "Fix loose, jammed or damaged commercial office partitions, floor springs, and aluminium frames." },
-      { name: "Custom Window Modification", desc: "Upgrade old windows with custom sizing, extra mosquito tracks, and modern security hardware." },
+      { name: "Soundproof Window Upgrades", path: "/soundproof-window-upgrades-mumbai", desc: "Improve noise insulation with acoustic double glass. Sleep peacefully without traffic or monsoon noise." },
+      { name: "Domal & Slim Domal Windows", path: "/domal-window-repair-mumbai", desc: "Professional repair, heavy bearing replacement, and servicing for premium Domal sliding doors & windows." },
+      { name: "Invisible Grills For Balconies & Windows", path: "/invisible-grills-mumbai", desc: "SS316 marine-grade stainless steel invisible grills for high-rise balconies and windows. Child-safe, rust-proof and keeps your open view." },
+      { name: "Pigeon Net Installation", path: "/pigeon-net-installation-mumbai", desc: "UV-stabilized pigeon & bird nets for balconies, windows, AC ducts and building shafts. Stops nesting and droppings for good." },
+      { name: "Mosquito Net For Sliding Windows", path: "/mosquito-net-sliding-window-mumbai", desc: "Pleated, sliding and fixed insect mesh fitted to your existing aluminium sliding windows and balcony doors." },
+      { name: "Rubber, Gasket & Silicone Sealing", path: "/rubber-gasket-sealing-mumbai", desc: "Stop water leakage, drafts & black dust. High-durability EPDM rubber seals and monsoon waterproofing." },
+      { name: "Aluminium Partition & Shutter Repair", path: "/aluminium-partition-repair-mumbai", desc: "Fix loose, jammed or damaged commercial office partitions, floor springs, and aluminium frames." },
+      { name: "Custom Window Modification", path: "/custom-window-modification-mumbai", desc: "Upgrade old windows with custom sizing, extra mosquito tracks, and modern security hardware." },
     ]
   },
   {
     category: "New Window Fabrication & Installation",
     items: [
-      { name: "Brand New Aluminium Sliding Windows", desc: "Custom designed, fabricated & installed from our Powai workshop. High-grade Jindal aluminium, smooth-glide rollers, and premium powder-coated finishes." },
+      { name: "Brand New Aluminium Sliding Windows", path: "/new-window-installation-mumbai", desc: "Custom designed, fabricated & installed from our Powai workshop. High-grade Jindal aluminium, smooth-glide rollers, and premium powder-coated finishes." },
       { name: "New Domal & Slim Profile Systems", desc: "Heavy-duty luxury Domal sliding systems for high-rises and large balcony openings. Maximum wind resistance and acoustic sound isolation." },
-      { name: "Custom French Windows & Balcony Enclosures", desc: "Transform your balcony or living space with full-height floor-to-ceiling glass, custom partitions, and sliding folding systems." },
-      { name: "Double-Glazed Soundproof Window Installation", desc: "Brand new acoustic double-glazed (DGU) window systems engineered to eliminate 80%+ of Mumbai traffic and street noise." },
+      { name: "Aluminium Doors & Bathroom Doors", path: "/aluminium-door-installation-mumbai", desc: "Waterproof aluminium bathroom doors, sliding & swing glass doors and balcony doors, custom fabricated and installed." },
+      { name: "Bathroom Windows & Exhaust Fan Ventilators", path: "/bathroom-window-mumbai", desc: "Aluminium bathroom windows, louvre ventilators, frosted glass and exhaust fan panels for damp-free washrooms." },
+      { name: "Shower & Bathroom Glass Partitions", path: "/glass-partition-mumbai", desc: "Toughened glass shower partitions, bathroom separators and sliding glass shower doors with rust-free fittings." },
+      { name: "Glass Balcony Railings", path: "/glass-balcony-railing-mumbai", desc: "Toughened glass balcony railings and handrails with rust-free SS fittings for balconies, terraces and staircases." },
+      { name: "Aluminium Kitchen Cupboards", path: "/aluminium-kitchen-cupboard-mumbai", desc: "Waterproof, termite-proof aluminium kitchen cabinets, trolleys and utility cupboards made to measure." },
+      { name: "Aluminium & Glass Office Partitions", path: "/aluminium-partition-installation-mumbai", desc: "New aluminium and toughened glass partitions, cabins and room dividers for offices, shops and homes." },
+      { name: "French Windows, Sliding Folding Doors & Balcony Enclosures", path: "/french-windows-mumbai", desc: "Transform your balcony or living space with full-height floor-to-ceiling glass, custom partitions, and sliding folding systems." },
+      { name: "Double-Glazed Soundproof Window Installation", path: "/soundproof-window-upgrades-mumbai", desc: "Brand new acoustic double-glazed (DGU) window systems engineered to eliminate 80%+ of Mumbai traffic and street noise." },
     ]
   }
 ] as const;
@@ -120,7 +141,10 @@ export const problemOptions = [
   "Lock / Handle broken",
   "Broken glass",
   "Need Soundproofing",
-  "Need Pigeon/Mosquito Net",
+  "Need Invisible Grill",
+  "Need Pigeon Net",
+  "Need Mosquito Net",
+  "Need Aluminium Door / Partition",
   "Other",
 ] as const;
 
@@ -148,6 +172,10 @@ export const faqs = [
   {
     q: "Which areas in Mumbai do you cover, and how quickly can you visit?",
     a: "We provide 100% doorstep service anywhere in Mumbai — Powai, Bandra, Andheri, Worli, South Mumbai, Chembur, Ghatkopar, Goregaon, Malad, Mulund, and surrounding suburbs. Because our service vans carry heavy-duty replacement parts, we offer same-day doorstep visits. Message us early to lock in today's slot.",
+  },
+  {
+    q: "Do you install invisible grills and pigeon nets?",
+    a: "Yes. We install SS316 stainless steel invisible grills and UV-stabilized pigeon nets for balconies, windows and AC ducts across Powai and Mumbai. Send a photo of the balcony or window on WhatsApp and we will share the measurement visit slot and a per sq. ft. quote.",
   },
   {
     q: "What if I actually need brand new windows or soundproof glass?",
